@@ -1,310 +1,198 @@
-# AcadChain — Decentralized Academic Data Bank
-
-## Project Title
-
-AcadChain
-
----
+# AcadChain
 
 ## Project Description
 
-AcadChain is a decentralized academic knowledge marketplace built on Soroban and the Stellar blockchain. It enables researchers, students, and academic authors to securely publish, verify, and monetize academic resources such as theses, dissertations, research papers, technical reports, and educational datasets.
+AcadChain is a decentralized academic knowledge marketplace built on Soroban and the Stellar blockchain. It enables researchers, students, and academic authors to securely publish, verify, and monetize academic resources such as theses, research papers, technical reports, and educational datasets.
 
-The platform introduces a trustless verification model combining **AI-based validation** and **human reviewer approval**, ensuring academic quality and authenticity. Readers can purchase permanent access to verified academic content using XLM, while royalties are automatically distributed to authors, reviewers, and the platform through transparent smart contracts.
-
-AcadChain transforms academic publishing into a decentralized, copyright-protected, and revenue-sharing ecosystem.
+The platform combines AI-powered validation and human reviewer approval to ensure content quality and authenticity. Users can purchase permanent access to verified academic materials using XLM, while royalties are automatically distributed to authors, reviewers, and the platform through transparent smart contracts.
 
 ---
 
 ## Project Vision
 
-The vision of AcadChain is to build a decentralized global academic ecosystem where knowledge ownership is protected, academic materials are fairly monetized, and educational access becomes more transparent and trustworthy.
+AcadChain aims to build a decentralized global academic ecosystem where:
 
-Traditional academic sharing systems often suffer from:
+* knowledge ownership is protected,
+* academic materials are fairly monetized,
+* verification is transparent and trustless,
+* educational resources are more accessible worldwide.
 
-* plagiarism risks,
-* lack of verification,
-* centralized control,
-* unfair monetization,
-* inaccessible research materials.
-
-AcadChain solves these issues through blockchain-based ownership proof, decentralized verification, and automated royalty distribution powered by Soroban smart contracts.
+By leveraging blockchain technology, AcadChain eliminates centralized control while providing immutable ownership proof and automated royalty distribution.
 
 ---
 
 ## Key Features
 
-### **Academic Document Registration**
+### Academic Document Registration
 
-Authors can upload and register academic materials including:
+Authors can publish:
 
 * Theses
 * Dissertations
 * Research Papers
 * Technical Reports
-* Educational datasets
+* Educational Datasets
 
-Only metadata and encrypted file hashes (IPFS CID) are stored on-chain for transparency and copyright proof.
+Only metadata and encrypted IPFS CIDs are stored on-chain to ensure transparency and copyright protection.
 
-### **Dual Verification System**
+### Dual Verification System
 
-AcadChain introduces a **2-layer verification process**:
+Documents undergo a two-step verification process:
 
-#### **AI Verification**
+**AI Verification**
 
-Documents are checked through AI-based analysis:
+* plagiarism detection,
+* content validation,
+* metadata consistency check,
+* AI-generated reports.
 
-* plagiarism similarity detection,
-* content quality validation,
-* metadata verification,
-* AI-generated analysis reports.
+**Human Reviewer Approval**
 
-#### **Human Reviewer Verification**
-
-Verified reviewers assess academic quality and vote:
+Registered reviewers vote to:
 
 * Approve
 * Reject
 
-Documents require approval quorum before publication.
+Documents are published only after reaching the required approval quorum.
 
-### **Reviewer Staking Mechanism**
+### Reviewer Staking
 
-Reviewers must stake XLM to participate.
+Reviewers stake XLM to participate.
 
-This creates accountability and reduces malicious reviews.
+This mechanism:
 
-Reviewers can be:
+* increases accountability,
+* discourages malicious reviews,
+* rewards honest reviewers,
+* enables slashing for fraudulent behavior.
 
-* rewarded for valid reviews,
-* slashed for fraudulent or abusive behavior.
+### Permanent Access Licensing
 
-### **Permanent Paid Access**
+Users purchase permanent access to published documents using XLM.
 
-Users can purchase **permanent access licenses** to published documents using XLM.
+Access rights are stored transparently on-chain.
 
-Access rights are recorded transparently on-chain.
+### Automated Royalty Distribution
 
-### **Automated Royalty Distribution**
-
-Every purchase automatically distributes revenue:
+Revenue from each purchase is automatically distributed:
 
 ```txt
-70% → Document Author
+70% → Author
 20% → Platform Treasury
 10% → Reviewer Reward Pool
 ```
 
-This ensures fair compensation without intermediaries.
+### Copyright Protection
 
-### **Copyright & Ownership Protection**
+AcadChain records cryptographic fingerprints of documents on-chain, enabling:
 
-AcadChain stores document cryptographic fingerprints on-chain.
-
-This enables:
-
-* proof of ownership,
+* ownership proof,
 * timestamp verification,
-* anti-plagiarism evidence,
+* plagiarism evidence,
 * copyright dispute support.
 
-### **Transparent Lifecycle Tracking**
+### Transparent Lifecycle
 
-Each document follows a fully transparent lifecycle:
+Every document follows a transparent lifecycle:
 
 ```txt
 SUBMITTED
-↓
+    ↓
 AI VERIFICATION
-↓
+    ↓
 PENDING REVIEW
-↓
+    ↓
 UNDER REVIEW
-↓
+    ↓
 PUBLISHED / REJECTED
 ```
 
-All state changes are recorded immutably on-chain.
+All state transitions are permanently recorded on-chain.
 
-### **Admin Security Controls**
+### Admin Controls
 
-Platform administrators can:
+Administrators can:
 
 * pause the protocol,
 * revoke malicious content,
 * slash fraudulent reviewers,
-* manage system configurations.
+* update system configurations.
 
 ---
 
 ## Usage Instructions
 
-### 1. Deploy Contract
+1. Deploy the smart contract on Soroban.
 
-Deploy the AcadChain smart contract on Soroban.
-
-Initialize:
+2. Initialize:
 
 * Admin wallet
 * Treasury wallet
 * XLM asset contract
 * Minimum reviewer stake
 
----
+3. Authors submit:
 
-### 2. Submit Academic Documents
+* title,
+* abstract,
+* encrypted IPFS CID,
+* institution,
+* language,
+* access price.
 
-Authors register academic content:
+4. AI performs verification.
 
-* title
-* abstract
-* IPFS encrypted file hash
-* institution
-* language
-* access price
+5. Reviewers stake XLM and vote.
 
-Documents enter the **Pending AI Verification** stage.
+6. Published documents become available for purchase.
 
----
+7. Users purchase permanent access using XLM.
 
-### 3. AI Verification
-
-Platform AI validates:
-
-* plagiarism similarity score,
-* content integrity,
-* AI report generation.
-
-Approved documents move to human review.
-
----
-
-### 4. Reviewer Evaluation
-
-Registered reviewers stake XLM and submit review votes.
-
-A document becomes published when:
-
-* minimum approval quorum is reached,
-* approval ratio exceeds 50%.
-
----
-
-### 5. Purchase Access
-
-Readers pay in **XLM** to access published documents.
-
-The smart contract:
-
-* grants permanent access,
-* records ownership,
-* distributes royalties automatically.
-
----
-
-### 6. Withdraw Earnings
-
-Authors, reviewers, and treasury can withdraw accumulated XLM earnings at any time.
+8. Authors, reviewers, and treasury withdraw earnings.
 
 ---
 
 ## Future Scope
 
-### **Advanced AI Integration**
-
-* semantic academic search,
-* automatic summarization,
-* AI-powered document chat,
-* citation generation.
-
-### **NFT-Based Academic Certificates**
-
-Convert verified research ownership into academic NFTs.
-
-### **Institution Verification**
-
-Universities can verify official academic submissions.
-
-### **Cross-University Research Marketplace**
-
-Enable global collaboration among institutions and researchers.
-
-### **Subscription-Based Premium Access**
-
-Offer premium plans for unlimited research access.
-
-### **Decentralized Governance**
-
-Introduce DAO governance for moderation and protocol decisions.
-
-### **Scholar Token Ecosystem**
-
-Launch an ecosystem token for governance, rewards, and fee reductions.
+* Semantic academic search
+* AI-powered document chat
+* Automatic summarization
+* Citation generation
+* NFT academic certificates
+* Institution verification
+* Cross-university research marketplace
+* Subscription-based premium plans
+* DAO governance
+* Scholar ecosystem token
 
 ---
 
 ## Technology Stack
 
-### Blockchain Layer
+### Blockchain
 
-* Soroban Smart Contracts
 * Stellar Blockchain
+* Soroban Smart Contracts
 
-### Smart Contract Development
+### Development
 
 * Rust
 * Soroban SDK
 
-### Storage Layer
+### Storage
 
-* IPFS (Encrypted Academic Files)
+* IPFS (Encrypted Files)
 
-### Payment System
+### Payments
 
-* XLM (Stellar Lumens)
+* XLM
 
 ### Security
 
 * Cryptographic ownership proof
-* Immutable on-chain audit trail
-* Reviewer staking mechanism
-* Permissioned authorization
-
----
-
-## Smart Contract Features
-
-### Document Management
-
-* Submit document
-* Query metadata
-* Publication tracking
-* Copyright proof
-
-### Verification System
-
-* AI verification
-* Human review voting
-* Reputation logic
+* Immutable audit trail
 * Reviewer staking
-
-### Access Management
-
-* Permanent document access
-* Access validation
-* Immutable ownership
-
-### Revenue Management
-
-* Royalty split
-* Earnings tracking
-* Withdraw system
-
-### Security Controls
-
-* Emergency pause
-* Reviewer slashing
-* Document revocation
+* Permissioned authorization
 
 ---
 
@@ -312,13 +200,13 @@ Launch an ecosystem token for governance, rewards, and fee reductions.
 
 AcadChain welcomes contributions from:
 
-* blockchain developers,
-* researchers,
-* academic institutions,
-* AI engineers,
-* Soroban ecosystem contributors.
+* Blockchain developers
+* Researchers
+* Academic institutions
+* AI engineers
+* Soroban ecosystem contributors
 
-Fork the repository and submit pull requests to improve the decentralized academic ecosystem.
+Fork the repository and submit pull requests to help improve the decentralized academic ecosystem.
 
 ---
 
